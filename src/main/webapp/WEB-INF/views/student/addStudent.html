@@ -8,7 +8,7 @@
 
 </head>
 <body>
-<form th:action="@{saveStudent}"
+<form th:action="@{/{id}/saveStudent(id=${groupId})}"
       th:object="${student}"
       th:method="POST"
       style="text-align:center; margin-top:200px; font-size: 30px;">

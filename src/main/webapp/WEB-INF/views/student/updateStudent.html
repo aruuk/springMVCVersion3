@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<form th:action="@{/students/{companyId}/{id}/updateStudent (companyId=${companyId},id=${student.getId()})}"
+<form th:action="@{/students/{groupId}/{id}/updateStudent(groupId=${groupId},id=${student.getId()})}"
       th:object="${student}"
       th:method="POST">
     <div>

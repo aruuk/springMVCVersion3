@@ -49,14 +49,12 @@ public class Course {
     private List<Lesson> lessons;
 
 
-
     public Course(String courseName, int duration, String description, LocalDate dateOfStart) {
         this.courseName = courseName;
         this.duration = duration;
         this.description = description;
         this.dateOfStart = dateOfStart;
     }
-
 
     public void addGroup(Group group) {
         if (groups==null){

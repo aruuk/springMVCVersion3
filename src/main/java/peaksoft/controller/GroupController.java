@@ -4,13 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import peaksoft.model.Course;
 import peaksoft.model.Group;
-import peaksoft.model.Instructor;
-import peaksoft.model.Student;
 import peaksoft.service.CourseService;
 import peaksoft.service.GroupService;
-import peaksoft.service.StudentService;
 
 
 @Controller
@@ -54,11 +50,11 @@ public class GroupController {
         return "group/updateGroup";
     }
 
-    @PostMapping("/{id}/saveUpdateGroup")
-    public String saveUpdateGroup(@PathVariable("id") Long id,
+    @PostMapping("/saveUpdateGroup")
+    public String saveUpdateGroup(@RequestParam("id") Long id,
                                   @ModelAttribute("group") Group group) {
         groupService.updateGroup(id, group);
-        return "redirect:/groups/group/";
+        return "redirect:/groups/ " + id;
     }
 
     @GetMapping("/{courseId}/{id}/deleteGroup")

@@ -70,4 +70,10 @@ public class CompanyController {
         companyService.deleteCompany(id);
         return "redirect:/companies";
     }
+
+    @GetMapping("/infoPage")
+    private String infoPage(){
+        return "company/infoPage";
+    }
+
 }

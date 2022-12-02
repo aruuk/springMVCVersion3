@@ -5,7 +5,7 @@
 </head>
 <body>
 <form action="#"
-      th:action="@{/{courseId}/{id}/saveGroupByCourseId(courseId=${courseId}, id=${id})}"
+      th:action="@{/{id}/saveGroup(id=${courseId})}"
       th:object="${group}"
       method="post">
     <div class="container">
